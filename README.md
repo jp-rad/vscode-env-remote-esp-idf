@@ -1,0 +1,1 @@
+# vscode-env-remote-esp-idf
