@@ -11,16 +11,25 @@
 		"--privileged", "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"
 	],
 
-	//"workspaceMount": "source=${localWorkspaceFolder}../,target=/home/${localWorkspaceFolderBasename},type=bind",
-    //"workspaceFolder": "/home",
-    //"workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/home/vscode/ws",
-	//"workspaceFolder": "/home/vscode/ws/projects",
+	"workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/home/vscode/ws",
+	// Workspace
+	"workspaceFolder": "/home/vscode/ws/projects",
+	//"workspaceFolder": "/home/vscode/ws/projects/micropython",
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "bash",
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "bash",
+				"args": [ "-l" ]
+			}
+		}
+	},
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"ms-vscode.cpptools"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -30,6 +39,6 @@
 	// "postCreateCommand": "gcc -v",
 
 	// Comment out this line to run as root instead.
-	//"remoteUser": "vscode"
+	"remoteUser": "vscode"
 
 }
