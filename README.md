@@ -15,11 +15,12 @@ https://hub.docker.com/r/espressif/idf/
 
 # 使い方
 
+1. 作業用のフォルダを作成し、カレントディレクトリとします。 - `cd yourworkfolder`
 1. 本リポジトリを取得します。 - `git clone https://github.com/jp-rad/vscode-env-remote-esp-idf.git`
 1. Visual Studio Codeで開きます。
 1. `Reopen in Container`を実行します。
 1. `ws`フォルダ内でコーディングします。
-1. ESP-IDF(`make`コマンドや`idf.py`ツール)でコンパイルします。
+1. ESP-IDF(`make`コマンドや`idf.py`ツール)でビルド（コンパイル）します。
 
 
 # 例：ESP32版 micropython のビルド
@@ -32,6 +33,7 @@ git clone https://github.com/jp-rad/vscode-env-remote-esp-idf.git
 
 [micropython](https://github.com/micropython/micropython.git)のリポジトリを取得します。
 ```
+cd yourworkfolder
 cd vscode-env-remote-esp-idf/ws
 git clone https://github.com/micropython/micropython.git
 ```
@@ -53,7 +55,7 @@ code vscode-env-remote-esp-idf
 
 新しいターミナルを開き(`bash`)、次の手順でビルドします。
 ```
-cd /home/vscode/ws/projects/micropython
+cd /home/vscode/ws/micropython
 make -C mpy-cross
 cd ports/esp32
 make submodules
