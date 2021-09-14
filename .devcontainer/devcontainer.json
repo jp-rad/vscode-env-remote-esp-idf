@@ -11,10 +11,10 @@
 		"--privileged", "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"
 	],
 
-	"workspaceMount": "type=bind,source=${localWorkspaceFolder},target=/home/vscode/ws",
+	"workspaceMount": "type=bind,source=${localWorkspaceFolder}/projects,target=/home/vscode/ws",
 	// Workspace
-	"workspaceFolder": "/home/vscode/ws/projects",
-	//"workspaceFolder": "/home/vscode/ws/projects/micropython",
+	"workspaceFolder": "/home/vscode/ws",
+	//"workspaceFolder": "/home/vscode/ws/micropython",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
