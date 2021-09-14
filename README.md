@@ -18,7 +18,7 @@ https://hub.docker.com/r/espressif/idf/
 1. 本リポジトリを取得します。 - `git clone https://github.com/jp-rad/vscode-env-remote-esp-idf.git`
 1. Visual Studio Codeで開きます。
 1. `Reopen in Container`を実行します。
-1. `projects`フォルダ内でコーディングします。
+1. `ws`フォルダ内でコーディングします。
 1. ESP-IDF(`make`コマンドや`idf.py`ツール)でコンパイルします。
 
 
@@ -32,7 +32,7 @@ git clone https://github.com/jp-rad/vscode-env-remote-esp-idf.git
 
 [micropython](https://github.com/micropython/micropython.git)のリポジトリを取得します。
 ```
-cd vscode-env-remote-esp-idf/projects
+cd vscode-env-remote-esp-idf/ws
 git clone https://github.com/micropython/micropython.git
 ```
 
@@ -44,8 +44,8 @@ code vscode-env-remote-esp-idf
 
 `.devcontainer/devcontainer.json`ファイルを開き、`workspaceFolder`で、`micropython`のフォルダを指定します(コメントアウトを解除します)。
 ```
-	//"workspaceFolder": "/home/vscode/ws/projects",
-	"workspaceFolder": "/home/vscode/ws/projects/micropython",
+	//"workspaceFolder": "/home/vscode/ws",
+	"workspaceFolder": "/home/vscode/ws/micropython",
 ```
 
 左下の`Open a Remote Window`アイコンをクリックし、画面上部のドロップダウンリストから`Reopen in Container`を選択してDockerコンテナを起動します。  
